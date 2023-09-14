@@ -1,10 +1,12 @@
 const form = document.querySelector(".contacts__form");
+
 const fields = form.querySelectorAll(".input-field");
 
 // проверка валидации
 const checkValidation = () => {
   let error;
 
+<<<<<<< HEAD
   //   for (let i = 0; i < fields.length; i++) {
   //     if (!fields[i].value) {
   //       console.log("Пусто", fields[i]);
@@ -12,6 +14,17 @@ const checkValidation = () => {
   //       form[i].parentElement.appendChild(error, fields[i]);
   //     }
   //   }
+=======
+  for (let i = 0; i < fields.length; i++) {
+    if (!fields[i].value) {
+      console.log("Пусто", fields[i]);
+
+      error = generateError("Поле не может быть пустым");
+
+      form[i].parentElement.appendChild(error, fields[i]);
+    }
+  }
+>>>>>>> test2
 
   return !!error;
 };
